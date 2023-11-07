@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -221,5 +220,18 @@
         <p>© 2023 GG Hospital</p>
       </div>
     </footer>
+    <script>
+    
+      // Retrieve the query string
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+
+      // Get values from the query string and set them in the form elements
+      document.getElementById('textbox1').value = urlParams.get('firstName') || '';
+      document.getElementById('textbox2').value = urlParams.get('lastName') || '';
+      document.getElementById('textbox3').value = urlParams.get('age') || '';
+      document.getElementById('textbox4').value = urlParams.get('gender') || '';
+      document.getElementById('textbox5').value = urlParams.get('birthDate') || '';
+  </script>
   </body>
 </html>
